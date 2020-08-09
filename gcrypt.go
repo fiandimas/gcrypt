@@ -48,3 +48,11 @@ func HmacSHA256(m string, k string) string {
 	a := hasher.Sum(nil)
 	return hex.EncodeToString(a)
 }
+
+func Base64Enc(p string) string {
+	return base64.StdEncoding.EncodeToString([]byte(p))
+}
+
+func Base64Dec(p string) string {
+	return base64.StdEncoding.DecodeString([]byte(p))
+}
